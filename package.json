@@ -1,7 +1,7 @@
 {
   "name": "cy-zero-bank-visual-regr",
   "version": "1.0.0",
-  "description": "visual regression using cypress-image-snapshot plugin",
+  "description": "visual regression using cypress-image-snapshot plugin on image carousel and single elements",
   "main": "index.js",
   "scripts": {
     "cy.open": "cypress open",
