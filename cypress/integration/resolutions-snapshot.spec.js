@@ -1,5 +1,10 @@
 // Snapshot of Home, Online Banking, and Feedback pages in different devices and desktop resolutions
 
+/* 
+Required plugins:
+"cypress-image-snapshot"
+*/
+
 // urls located in cypress.env.json file
 
 const viewports = ["ipad-2", "iphone-6+", [1920, 1080], [1366, 768]];
