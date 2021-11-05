@@ -1,0 +1,25 @@
+{
+	"loginId1": {
+		"username": "username",
+		"password": "password",
+		"invalidUsername": "johndoe ",
+		"invalidPassword": "invalid password"
+	},
+
+	"personId1": {
+		"firstAndLastName": "John Doe",
+		"firstName": "John",
+		"lastName": "Doe",
+		"address": {
+			"street": "7171 Main St.",
+			"unit": "71",
+			"city": "Napa",
+			"state": "CA",
+			"country": "United States"
+		},
+		"combinedAddress": "7171 Main St. Unit 71, Napa, CA, United States",
+		"accountNumber": "1234567890",
+		"subject": "Some subject...",
+		"comment": "Some comment..."
+	}
+}

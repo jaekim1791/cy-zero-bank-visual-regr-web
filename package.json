@@ -1,0 +1,18 @@
+{
+  "name": "cy-zero-bank-visual-regr",
+  "version": "1.0.0",
+  "description": "visual regression using cypress-image-snapshot plugin",
+  "main": "index.js",
+  "scripts": {
+    "cy.open": "cypress open",
+    "cy.run": "cypress run --browser chrome",
+    "cy.run.update.snapshot": "cypress run --env updateSnapshot=true --browser chrome",
+    "cy.run.no.fail": "cypress run --env failOnSnapshotDiff=false --reporter cypress-image-snapshot/reporter"
+  },
+  "author": "Jae Kim",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^8.7.0",
+    "cypress-image-snapshot": "^4.0.1"
+  }
+}
