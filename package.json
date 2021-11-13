@@ -13,7 +13,7 @@
   },
   "author": "Jae Kim",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "cypress": "^8.7.0",
     "cypress-image-snapshot": "^4.0.1"
   }
