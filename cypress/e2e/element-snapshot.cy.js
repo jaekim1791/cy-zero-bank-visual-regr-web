@@ -12,11 +12,21 @@ Required plugins:
 "cypress-image-snapshot"
 */
 
-// All urls located in cypress.env.json file
+// urls located in cypress.env.json file
 
-const loggedInUrls = [Cypress.env("url").onlineBanking, Cypress.env("url").feedback];
+const loggedInUrls = [
+  Cypress.env("url").onlineBanking,
+  Cypress.env("url").feedback,
+];
 
 describe("SNAPSHOT OF LOGGED IN USER NAME", () => {
+  Cypress.Cookies.debug(true, { verbose: false });
+
+  beforeEach(() => {
+    // Site deletes cookie after signed in
+    Cypress.Cookies.preserveOnce("JSESSIONID");
+  });
+
   it("load base url", () => {
     cy.baseUrl();
   });
@@ -37,7 +47,9 @@ describe("SNAPSHOT OF DISCLAIMER", () => {
       cy.clock(currentTime);
       cy.visit(loggedInUrls);
       cy.get(".disclaimer.span12")
-        .contains("Copyright © 2012-2018, Micro Focus Development Company. All rights reserved.")
+        .contains(
+          "Copyright © 2012-2018, Micro Focus Development Company. All rights reserved."
+        )
         .matchImageSnapshot();
     });
   });

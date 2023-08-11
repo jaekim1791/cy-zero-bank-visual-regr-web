@@ -5,11 +5,15 @@ Required plugins:
 "cypress-image-snapshot"
 */
 
-// All urls located in cypress.env.json file
+// urls located in cypress.env.json file
 
 const viewports = ["ipad-2", "iphone-6+", [1920, 1080], [1366, 768]];
 
-const urls = [Cypress.env("url").home, Cypress.env("url").onlineBanking, Cypress.env("url").feedback];
+const urls = [
+  Cypress.env("url").home,
+  Cypress.env("url").onlineBanking,
+  Cypress.env("url").feedback,
+];
 
 describe("RESOLUTION", () => {
   viewports.forEach((resolution) => {
